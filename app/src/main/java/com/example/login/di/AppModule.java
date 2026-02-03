@@ -3,6 +3,8 @@ package com.example.login.di;
 import android.app.Application;
 import android.content.Context;
 
+import com.example.login.utils.SharedPrefManager;
+
 import javax.inject.Singleton;
 
 import dagger.Module;
@@ -20,5 +22,11 @@ public class AppModule {
     @Singleton
     Context provideContext(){
         return app;
+    }
+
+    @Provides
+    @Singleton
+    SharedPrefManager provideSharedPrefManager(Context context) {
+        return new SharedPrefManager(context);
     }
 }

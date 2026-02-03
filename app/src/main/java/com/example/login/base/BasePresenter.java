@@ -1,6 +1,6 @@
 package com.example.login.base;
 
-public interface BasePresenter<T> {
-    void attach(T view);
-    void dettach();
+public interface BasePresenter<V> {
+    void attach(V view);
+    void detach();
 }
